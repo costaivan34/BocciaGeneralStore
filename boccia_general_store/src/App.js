@@ -1,21 +1,24 @@
 import logo from './logo.png';
 import './App.css';
+import NavBar from'./components/NavBar.js'
 
 function App() {
   return (
     <div className="App">
+       <NavBar />
       <header className="App-header">
+     
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Boccia General Store!
-        </p>
+        <h1>
+          Welcome to Boccia General Store!<br></br>
+        </h1>
         <a
           className="App-link"
           href="https://github.com/costaivan34/BocciaGeneralStore"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Link to Repo
+         Enter
         </a>
       </header>
     </div>
