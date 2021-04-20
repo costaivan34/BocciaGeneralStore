@@ -1,9 +1,10 @@
 import './NavBar.css';
-import logo from '../logo.png';
+import logo from '../../logo.png';
+import {CartWidget} from './CartWidget.js';
 
-function NavBar() {
+export const  NavBar = () => {
   return (
-    <div className="navbar navbar-expand-lg navbar-secondary bg-light"> 
+    <div className="navbar navbar-expand-lg navbar-secondary fixed-top bg-light"> 
       <div className="container-fluid">  <p className="navbar-brand" href=" ">
           <img src={logo} alt=" " width="30" height="24" className="d-inline-block align-text-top logo"></img>
           Boccia General Store 
@@ -22,6 +23,9 @@ function NavBar() {
           <li className="link nav-item">
           <a  href=" ">Contacto</a>
           </li>
+          <li className="link nav-item">
+            <CartWidget />
+          </li>
         </ul>
       </nav>
         </div>
@@ -30,4 +34,3 @@ function NavBar() {
   );
 }
 
-export default NavBar;
