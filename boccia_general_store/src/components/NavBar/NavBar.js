@@ -1,5 +1,5 @@
 import './NavBar.css';
-import logo from '../../logo.png';
+import logo from '../../assets/logo.png';
 import {CartWidget} from './CartWidget.js';
 
 export const  NavBar = () => {
