@@ -1,17 +1,26 @@
-import { Loader } from "../Loader.js";
 import "./ItemList.css";
+import "./ItemDetail.css";
+import { ItemCount } from "./ItemCount.js";
+import { Loader } from "../Loader/Loader.js";
 
 export const ItemDetail = ({ item }) => {
   return (
     <div className="ItemDetail">
       {item.length > 0 ? ( 
-         item.map((article) => 
-          <div className="card">
-            <h4 className="title">{article.title}</h4>
-            <img src={article.picture}></img>
-            <p>{article.descripcion}</p>
-            <p>{article.price}</p>
-          </div>)
+         item.map((article,index) => 
+          <div className="container">
+            <div className="title-header">
+              <h4 className="title">{article.title}</h4>
+              <p className="price" >{article.price}</p>
+              <img className="picture-prod" alt="" src={article.picture}></img>
+              <div className="descrp-header">
+              <p className="descrp">{article.descripcion}</p>
+              <ItemCount stock={item.stock} initial={1} />
+            </div> 
+            </div> 
+           
+          </div>
+           )
       ) : (
         <Loader />
       )}

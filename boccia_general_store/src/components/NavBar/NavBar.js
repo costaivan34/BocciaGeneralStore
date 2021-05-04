@@ -1,35 +1,32 @@
 import "./NavBar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 import { CartWidget } from "./CartWidget.js";
+import { DropDown } from "./DropDown.js";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <div className="navbar navbar-expand-lg navbar-secondary  bg-light">
       <div className="container-fluid">
-        {" "}
-        <p className="navbar-brand">
+        <Link className="navbar-brand" to={"/"}>
           <img
             src={logo}
-            alt=" "
-            width="30"
-            height="24"
-            className="d-inline-block align-text-top logo"
+            alt=""
+            width="300"
+            
+            className="d-inline-block align-text-top"
           ></img>
-          Boccia General Store
-        </p>
+        </Link>
         <nav className="navigation">
           <ul className="links navbar-nav mr-auto">
             <li className="link nav-item">
-              <a href=" ">Inicio</a>
+            <Link to={"/"}>Inicio</Link>
             </li>
             <li className="link nav-item">
-              <a href=" ">Catalogo</a>
+              <DropDown />
             </li>
             <li className="link nav-item">
-              <a href=" ">Tienda</a>
-            </li>
-            <li className="link nav-item">
-              <a href=" ">Contacto</a>
+              <Link to={"/"}>Contacto</Link>
             </li>
             <li className="link nav-item">
               <CartWidget />

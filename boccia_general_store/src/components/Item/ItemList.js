@@ -1,5 +1,5 @@
 import { Item } from "./Item.js";
-import { Loader } from "../Loader.js";
+import { Loader } from "../Loader/Loader.js";
 import "./ItemList.css";
 
 export const ItemList = ({ items }) => {

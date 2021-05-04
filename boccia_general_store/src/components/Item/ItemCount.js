@@ -32,7 +32,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         value="-"
         onClick={() => subCount(count)}
       ></input>
-      <input type="text" value={count}></input>
+      <p>{count}</p>
       <input
         className="btn btn-danger"
         type="button"

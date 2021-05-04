@@ -1,0 +1,13 @@
+
+.ItemCount{
+  display: flex;
+  margin-top: 10%;
+}
+
+.ItemCount p{
+  padding: 1% 2% 0% 2%;
+}
+
+.ItemCount .btn-outline-danger{
+  margin-left: 2%;
+}

@@ -1,0 +1,42 @@
+.ItemDetail{
+  display:  block;
+}
+
+.descrp-header{
+  padding-right: 2%;
+  padding-left: 45%;
+}
+
+.ItemDetail .container{
+  margin-top: 1%;
+  width: 98%;
+
+}
+
+.ItemDetail  .picture-prod{
+  padding-left: 2%;
+  width: 40%;
+  float: left;
+}
+.ItemDetail  .descrp{
+  margin-top: 3%;
+text-align: justify;
+}
+
+.ItemDetail  .price{
+  text-align: center; 
+  border-bottom:1px solid rgba(0, 0, 0, 0.125);
+}
+
+.ItemDetail  .title-header{
+  float: right;
+
+  align-items: center;
+ 
+}
+
+
+
+.ItemDetail .title{
+ text-align: center; 
+}
