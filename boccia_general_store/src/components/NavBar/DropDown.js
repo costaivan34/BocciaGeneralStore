@@ -7,8 +7,20 @@ export const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [Categories, setCategories] = useState([]);
 
+  const getCategories = async () => {
+      const response = await fetch(
+        "https://fakerapi.it/api/v1/products?_quantity=1&_taxes=12&_categories_type=uuid"
+      );
+      const products = await response.json();
+    setTimeout(() => {
+      setCategories(CategoriesData);
+    }, 2000);
+    //setItems(products)
+  };
+
+
   useEffect(() => {
-    setCategories(CategoriesData);
+    getCategories();
   }, []);
 
   
