@@ -28,6 +28,10 @@ text-align: justify;
   border-bottom:1px solid rgba(0, 0, 0, 0.125);
 }
 
+.payment-box .btn {
+  margin: 1%;
+}
+
 .ItemDetail  .title-header{
   float: right;
 

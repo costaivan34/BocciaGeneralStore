@@ -20,9 +20,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
     setCount(value);
   };
 
-  onAdd = (value) => {
-    alert("vas a comprar " + value + " articulos");
-  };
+  
 
   return (
     <div className="ItemCount">
