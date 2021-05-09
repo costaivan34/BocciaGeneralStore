@@ -10,7 +10,6 @@ export const ItemDetail = ({ item }) => {
   const [paymentButton, setPaymentButton] = useState(false);
 
   useEffect(() => {
-    console.log(amount)
     if (amount !== 0) {
       setPaymentButton(true);
     } else {
@@ -39,14 +38,14 @@ export const ItemDetail = ({ item }) => {
                     <Link to="/cart" className="btn btn-danger">
                       Go to payment
                     </Link>
-                    <Link
+                    <input
                       className="btn btn-outline-danger"
+                      type="button"
+                      value="Go back"
                       onClick={() => {
                         setAmount(0);
                       }}
-                    >
-                      Go back
-                    </Link>
+                    ></input>
                   </div>
                 ) : (
                   <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />

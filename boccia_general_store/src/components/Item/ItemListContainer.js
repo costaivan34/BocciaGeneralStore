@@ -8,7 +8,7 @@ import { CategoriesData } from "../../data/CategoriesData.js";
 export const ItemListContainer = () => {
   let { id } = useParams(0);
   const [items, setItems] = useState([]);
-  const [categoryName, setCategoryName]= useState();
+  const [categoryName, setCategoryName]= useState("All");
  
   const getProductos = async () => {
     let productCategory = ProductData;
