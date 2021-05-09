@@ -1,4 +1,4 @@
-import "./NavBar.css";
+import "../../styles/navbar/Navbar.css";
 import logo from "../../assets/logo2.png";
 import { CartWidget } from "./CartWidget.js";
 import { DropDown } from "./DropDown.js";

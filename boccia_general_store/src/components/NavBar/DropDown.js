@@ -1,4 +1,4 @@
-import "./DropDown.css";
+import "../../styles/navbar/DropDown.css";
 import {Link} from "react-router-dom"
 import React, { useEffect, useState } from "react";
 import { CategoriesData } from "../../data/CategoriesData.js";

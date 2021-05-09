@@ -1,6 +1,6 @@
 import { Item } from "./Item.js";
-import { Loader } from "../Loader/Loader.js";
-import "./ItemList.css";
+import "../../styles/item/ItemList.css";
+import { Loader } from "../loader/Loader.js";
 
 export const ItemList = ({ items }) => {
   return (

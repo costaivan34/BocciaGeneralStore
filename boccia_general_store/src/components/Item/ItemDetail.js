@@ -1,7 +1,7 @@
-import "./ItemList.css";
-import "./ItemDetail.css";
+import "../../styles/item/ItemList.css";
+import "../../styles/item/ItemDetail.css";
 import { ItemCount } from "./ItemCount.js";
-import { Loader } from "../Loader/Loader.js";
+import { Loader } from "../loader/Loader.js";
 
 export const ItemDetail = ({ item }) => {
   return (
