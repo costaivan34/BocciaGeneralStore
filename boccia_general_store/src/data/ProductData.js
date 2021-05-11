@@ -17,7 +17,7 @@ export const ProductData = [
     descripcion: "A single Boccia 200 ball of soft Japanese microfiber/PU material (Boccia Petite). A smaller  & lighter version of our famous Superior Classic Boccia ball.",
     price: "$10",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2018/02/EXP1155-2.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2018/02/EXP1155-2.jpg",
   },
   {
     id: "3",
@@ -26,7 +26,7 @@ export const ProductData = [
     descripcion: "Boccia Outdoor: 13 balls – solid moulded of first-class synthetic material. 6 black, 6 white and 1 yellow target ball in a green nylon bag.This is a special offer with the last moulded balls in our stock.",
     price: "$60",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2018/10/EXP1010_blackWhite-500x500.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2018/10/EXP1010_blackWhite-500x500.jpg",
   },
   {
     id: "4",
@@ -35,7 +35,7 @@ export const ProductData = [
     descripcion: "Complete Referee kit containing:Referee paddle, measuring band, measuring callipers 29 cm and 14 cm – all packed in a sky blue bag",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2018/03/EXP1117B-500x500.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2018/03/EXP1117B-500x500.jpg",
   },
   {
     id: "5",
@@ -55,7 +55,7 @@ export const ProductData = [
     descripcion: "Boccia Scoreboard, new improved design Strong quality (wood), foldable. Easy to use. Packed in a cotton bag. Size: 18 x 54 cm.",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2017/10/EXP1111-500x500.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2017/10/EXP1111-500x500.jpg",
   },
   {
     id: "7",
@@ -64,7 +64,7 @@ export const ProductData = [
     descripcion: "articulo 1",
     price: "$300",
     stock: "20",
-    picture: "https://bocciaramps.com/wp-content/uploads/2017/05/boccia-ramp_3.jpg"
+    picture: "https://bocciaramps.com/wp-content/uploads/2017/05/boccia-ramp_3.jpg",
   },
   {
     id: "8",
@@ -73,7 +73,7 @@ export const ProductData = [
     descripcion: "PROLIMPIC MUSTANG LX2 Boccia ramp is made entirely of aluminum and polycarbonate, using the PROLIMPIC HIGH TECHNOLOGY CNC. The stand is made of steel and aluminum, with elements milled and rolled with CNC.The ramp consists of 3 elements: the base connected to the stand, plus 2 easily attached additional elements. Such a system makes it possible to play effectively both at short and long distances.",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2018/02/ProlimpicRamp.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2018/02/ProlimpicRamp.jpg",
   },
   {
     id: "9",
@@ -93,7 +93,7 @@ export const ProductData = [
     descripcion: "Boccia seat for the assistant – a comfortable seat for the BC3 player’s assitant with round protective inlays for 7 balls 42 cm. high seat 32 x 36 cm, carry up to 140 kg",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2017/10/EXP1127_NY1.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2017/10/EXP1127_NY1.jpg",
   },
   {
     id: "11",
@@ -102,7 +102,7 @@ export const ProductData = [
     descripcion: "Boccia Poloshirt, excellent quality. Light or dark blue colour and available in sizes: X-Small, Small, Medium, Large, X-Large and XX-Large",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2017/09/EXP1133-500x500.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2017/09/EXP1133-500x500.jpg",
   },
   {
     id: "12",
@@ -111,7 +111,7 @@ export const ProductData = [
     descripcion: "Our new, stylish boccia keychain.Made of a soft leather cord with a boccia ball in resin.Several different colours – red, white or black cord, and blue, white or red boccia ball.Delivered in a nice Boccia Collection satin gift bag.",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2019/12/BCKH605-500x500.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2019/12/BCKH605-500x500.jpg",
   },
   {
     id: "13",
@@ -131,7 +131,7 @@ export const ProductData = [
     descripcion: "Boccia earrings in silver and resin – “danglers” Comes in red, blue and white.",
     price: "$300",
     stock: "20",
-    picture: "https://handilifesport.com/wp-content/uploads/2017/01/GB-011E_White_400x400.jpg"
+    picture: "https://handilifesport.com/wp-content/uploads/2017/01/GB-011E_White_400x400.jpg",
   },
   {
     id: "15",
@@ -140,7 +140,7 @@ export const ProductData = [
     descripcion: "Storage for 6 boccia balls in a protective synthetic material that has the exact shape of the ball. Storage for the ramp extensions, magnetic straps for storage of the ball holder and special space for the measurements pad and pencil, so that they take up the least space possible in the player’s box. Really helpful for the sports assistant, allowing him to make much quicker movements and avoid the need to bend down during the game.",
     price: "$300",
     stock: "20",
-    picture: "https://bocciaramps.com/wp-content/uploads/2019/05/boccia-balls-tray_shelves_black_main3.jpg"
+    picture: "https://bocciaramps.com/wp-content/uploads/2019/05/boccia-balls-tray_shelves_black_main3.jpg",
   },
   {
     id: "16",
@@ -149,6 +149,6 @@ export const ProductData = [
     descripcion: "Foldable aluminum trolley for easy and safe moving of the ramp and boccia equipment inside the court.With 5 rotating wheels and a drawer with an elastic band for better protection of the front part of the ramp.Dimensions: 70cm x 45cmWeight: 6.300kg",
     price: "$300",
     stock: "20",
-    picture: "https://bocciaramps.com/wp-content/uploads/2019/05/boccia-court-trolley_1.jpg"
+    picture: "https://bocciaramps.com/wp-content/uploads/2019/05/boccia-court-trolley_1.jpg",
   },
 ];

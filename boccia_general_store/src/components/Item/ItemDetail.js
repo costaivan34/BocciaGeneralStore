@@ -2,12 +2,14 @@ import "../../styles/item/ItemList.css";
 import "../../styles/item/ItemDetail.css";
 import { ItemCount } from "./ItemCount.js";
 import { Loader } from "../loader/Loader.js";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import {CartContext} from "../../context/CartContext.js"
 
 export const ItemDetail = ({ item }) => {
   const [amount, setAmount] = useState(0);
   const [paymentButton, setPaymentButton] = useState(false);
+  const { cart, addItem } = useContext(CartContext);
 
   useEffect(() => {
     if (amount !== 0) {
@@ -16,6 +18,11 @@ export const ItemDetail = ({ item }) => {
       setPaymentButton(false);
     }
   }, [amount]);
+  
+
+  const toPayment = () => {
+    addItem(item,amount)
+  }
 
   const onAdd = (value) => {
     setAmount(value);
@@ -35,7 +42,9 @@ export const ItemDetail = ({ item }) => {
 
                 {paymentButton ? (
                   <div className="payment-box">
-                    <Link to="/cart" className="btn btn-danger">
+                    <Link to="/cart" className="btn btn-danger"  onClick={() => {
+                        toPayment();
+                      }}>
                       Go to payment
                     </Link>
                     <input
@@ -46,6 +55,9 @@ export const ItemDetail = ({ item }) => {
                         setAmount(0);
                       }}
                     ></input>
+                      <Link to="/" className="btn btn-outline-danger"  >
+                      Continue buying
+                    </Link>
                   </div>
                 ) : (
                   <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
