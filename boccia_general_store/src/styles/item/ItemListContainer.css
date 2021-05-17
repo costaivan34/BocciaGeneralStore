@@ -6,7 +6,6 @@
 }
 
 
-
 .W-title{
   padding-top: 5%;
   padding-bottom: 5%;
@@ -17,7 +16,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin-top: 2%;
-  margin-left: 2%;
+  margin-left: 0%;
   padding-bottom: 5%;
   color: antiquewhite;
 }
@@ -29,7 +28,7 @@
 
 .header-title {
   margin-top: 2%;
-  margin-left: 2%;
+ 
   margin-right: 2%;
 	background: #ff1e00;
   

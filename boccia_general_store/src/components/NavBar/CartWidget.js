@@ -4,16 +4,19 @@ import logo from "../../../src/assets/carrito.png";
 import { CartContext } from "../../context/CartContext.js";
 
 export const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { totalQuantity } = useContext(CartContext);
+
   return (
-    <Fragment className="CartWidget">
-      <img
-        src={logo}
-        alt=" "
-        width="30"
-        height="24"
-        className="d-inline-block align-text-top carrito "
-      ></img>
+    <Fragment>
+    { totalQuantity() > 0 ? (
+       <Fragment className="CartWidget">
+      <p  className="carrito ">
+        Cart({totalQuantity()})
+      </p>
+   </Fragment>
+    ) : (
+      ""
+    )}
     </Fragment>
   );
 };

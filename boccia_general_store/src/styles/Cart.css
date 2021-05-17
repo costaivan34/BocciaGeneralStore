@@ -1,0 +1,110 @@
+
+.Cart .picture-cart{
+  border-radius: 40px 10px;
+  padding-left: 2%;
+  width: 10%;
+  float: left;
+}
+
+.Cart .title{
+  margin-top: 2%;
+  padding-right: 25%;
+  margin-right: 25%;
+  padding-left: 2%;
+  text-decoration: solid;
+}
+
+
+.Cart .title a{
+  text-decoration: none;
+  color: black;
+}
+
+.Cart .cart-item-detail{
+  right: 5%;
+  float: right;
+  margin-left: 5%;
+  margin-top: 1%;
+  display: flex;
+  position: absolute;
+}
+
+
+.Cart .label{
+  margin-top: 2%;
+}
+
+.Cart .label-total{
+  margin-top: 1%;
+  margin-left: 4%;
+}
+
+
+.Cart .quantity{
+  margin-top: 2%;
+  padding-right: 2%;
+  padding-left: 1%;
+}
+
+
+.Cart .price-total{
+  margin-top: 2%;
+  padding-right: 2%;
+  padding-left: 20%;
+  
+}
+
+
+
+.Cart .cart-total{
+  font-weight: bold;
+  margin-top: 0%;
+  padding-right: 2%;
+  padding-left: 72%;
+
+  right: 1%;
+  float: right;
+  margin-left: 5%;
+  margin-top: 1%;
+  display: flex;
+  position: absolute;
+ 
+} 
+
+.Cart .list-group-total{
+  margin-left: 2%;
+  padding: 0%;
+}
+
+.Cart .list-group-item{
+  padding-left: 0%;
+  display: flex;
+
+}
+
+.Cart .total-group{
+  margin: 2%;
+  margin-left: 2%;
+  padding: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.Cart .list-group{
+  margin-right: 2%;
+  margin-left: 2%;
+  padding: 0%;
+}
+
+
+.Cart .title-warning{
+  text-align: center; 
+}
+
+.Cart .trashIcon{
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}

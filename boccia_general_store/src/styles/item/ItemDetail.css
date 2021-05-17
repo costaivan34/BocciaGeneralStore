@@ -21,10 +21,13 @@
 .ItemDetail  .descrp{
   margin-top: 3%;
 text-align: justify;
+
 }
 
-.ItemDetail  .price{
+.ItemDetail .price{
+  margin-top: 0%;
   text-align: center; 
+  font-weight: bold;
   border-bottom:1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -33,13 +36,10 @@ text-align: justify;
 }
 
 .ItemDetail  .title-header{
-  float: right;
 
   align-items: center;
  
 }
-
-
 
 .ItemDetail .title{
  text-align: center; 

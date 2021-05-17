@@ -13,7 +13,6 @@ export const NavBar = () => {
             src={logo}
             alt=""
             width="300"
-            
             className="d-inline-block align-text-top"
           ></img>
         </Link>
@@ -29,7 +28,8 @@ export const NavBar = () => {
               <Link to={"/"}>Contacto</Link>
             </li>
             <li className="link nav-item">
-              <CartWidget />
+            <Link to={"/cart"}> <CartWidget /></Link>
+             
             </li>
           </ul>
         </nav>
