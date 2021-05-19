@@ -37,7 +37,7 @@ export const Cart = () => {
                 <h4 className="price-total">
                   ${calculateSubtotal(article.quantity, article.price)}
                 </h4>
-                <a
+                <a href=" "
                   className="trashIcon"
                   onClick={() => {
                     removeItem(article.id);
@@ -63,7 +63,7 @@ export const Cart = () => {
           <h4 className="cart-total">${calculateTotal()}</h4>
         </div>
       ) : (
-        ""
+        " "
       )}
     </div>
   );

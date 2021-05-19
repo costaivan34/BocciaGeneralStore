@@ -10,7 +10,7 @@ export const ItemDetail = ({ item }) => {
   const [amount, setAmount] = useState(0);
   const [paymentButton, setPaymentButton] = useState(false);
   const { cart, addItem } = useContext(CartContext);
-
+console.log(item)
   useEffect(() => {
     if (amount !== 0) {
       setPaymentButton(true);
@@ -30,27 +30,26 @@ export const ItemDetail = ({ item }) => {
   return (
     <div className="ItemDetail">
       <div className=" list-group-item">
-        {item.length > 0 ? (
-          item.map((article, index) => (
+        {item ? (
             <Fragment>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item active">Inicio</li>
                   <li className="breadcrumb-item active">Product</li>
-                  <li className="breadcrumb-item active">{article.title}</li>
+                  <li className="breadcrumb-item active">{item.name}</li>
                 </ol>
               </nav>
 
               <div className="title-header">
-                <h4 className="title">{article.title}</h4>
-                <h4 className="price">${article.price}</h4>
+                <h4 className="title">{item.name}</h4>
+                <h4 className="price">${item.price}</h4>
                 <img
                   className="picture-prod"
                   alt=""
-                  src={article.picture}
+                  src={item.picture}
                 ></img>
                 <div className="descrp-header">
-                  <p className="descrp">{article.descripcion}</p>
+                  <p className="descrp">{item.descripcion}</p>
                   {paymentButton ? (
                     <div className="payment-box">
                       <Link
@@ -82,7 +81,7 @@ export const ItemDetail = ({ item }) => {
                 </div>
               </div>
             </Fragment>
-          ))
+          
         ) : (
           <Loader />
         )}

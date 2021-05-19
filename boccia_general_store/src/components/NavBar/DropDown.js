@@ -1,29 +1,29 @@
 import "../../styles/navbar/DropDown.css";
 import {Link} from "react-router-dom"
 import React, { useEffect, useState } from "react";
-import { CategoriesData } from "../../data/CategoriesData.js";
+import { getFireStore } from "../../firebase"
 
 export const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [Categories, setCategories] = useState([]);
 
   const getCategories = async () => {
-      const response = await fetch(
-        "https://fakerapi.it/api/v1/products?_quantity=1&_taxes=12&_categories_type=uuid"
-      );
-      const products = await response.json();
-    setTimeout(() => {
-      setCategories(CategoriesData);
-    }, 2000);
-    //setItems(products)
+      const db = getFireStore();
+      let CategoriesCollection=db.collection("categorias");
+      CategoriesCollection.get().then((querySnapshot) => {
+       if (querySnapshot.size === 0){
+       }
+       let catalogo = querySnapshot.docs.map(doc => doc.data());
+       setCategories(catalogo);
+       
+    }).catch((error)=> {console.log("Error searching items",error);}
+     )
   };
-
 
   useEffect(() => {
     getCategories();
   }, []);
 
-  
   return (
     <div className="nav-item dropdown">
     <a href=" " className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" onMouseOut={() => setIsOpen(isOpen)} onMouseOver={() => setIsOpen(!isOpen)}>Catalogo</a>
@@ -31,7 +31,7 @@ export const DropDown = () => {
       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {Categories.map((cat) => (
           <li>
-          <Link className="dropdown-item" to={`/category/${cat.id}`}>{cat.title}</Link>
+        <Link className="dropdown-item" to={`/category/${cat.key}`}>{cat.name}</Link>
           </li>
         ))}
       </ul>

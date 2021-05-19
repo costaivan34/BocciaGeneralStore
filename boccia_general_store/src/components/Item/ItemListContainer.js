@@ -1,40 +1,73 @@
 import "../../styles/item/ItemListContainer.css";
 import { ItemList } from "./ItemList.js";
-
+import { getFireStore } from "../../firebase"
 import { useParams } from "react-router-dom";
 import React, { Fragment, useEffect, useState } from "react";
-import { ProductData } from "../../data/ProductData.js";
-import { CategoriesData } from "../../data/CategoriesData.js";
-
+import {ProductData} from "../../data/ProductData.js";
 
 export const ItemListContainer = () => {
-  let { id } = useParams(0);
+  let { id } = useParams("0");
   const [items, setItems] = useState([]);
   const [categoryName, setCategoryName] = useState("All");
+     
+     const getCategoryName = async () => {
+      const db = getFireStore();
+      var docRef = db.collection("categorias").doc(id);
+     docRef.get().then((doc) => {
+         if (doc.exists) {
+             setCategoryName(doc.data().name);
+         }
+     }).catch((error) => {
+         console.log("Error getting document:", error);
+     });
+ }
+
+ const cargarDatos = () =>{
+  let productos = ProductData;
+  const db = getFireStore();
+  var citiesRef = db.collection("items");
+
+    console.log(productos)
+    productos.map((producto) => (
+    citiesRef.doc().set({
+      category: producto.idCat ,
+      name: producto.title,
+      descripcion: producto.descripcion,
+      price: producto.price,
+      stock: producto.stock,
+      picture:producto.picture })
+    ))
+ }
 
   const getProductos = async () => {
-    let productCategory = ProductData;
-    let category = "All";
-    if (id > 0 && id <= CategoriesData.length) {
-      productCategory = productCategory.filter(
-        (products) => products.idCat === id
-      );
-      category = CategoriesData.filter((category) => category.id === id);
-      category = category[0].title;
-    }
+     const db = getFireStore();
+     let itemCollection;
+      if (id===undefined ){
+      id = "0";
+      }
+      if ( id === "0"  ){
+      itemCollection =db.collection("items");
+     }else{
+      itemCollection =db.collection("items").where("category", "==", `${id}`);
+     }
+     itemCollection.get().then((querySnapshot) => {
+      if (querySnapshot.size === 0){
+       
+      }
+      let catalogo = querySnapshot.docs.map(doc => doc.data());
+      let ids = querySnapshot.docs.map(doc => doc.id);
+      for (let i= 0;i<catalogo.length;i++){
+        catalogo[i].id = ids[i];
+      }
+      setItems(catalogo);
+   }).catch((error)=> {console.log("Error searching items",error);}
+    )
+     
+}
 
-    setCategoryName(category);
-    const response = await fetch(
-      "https://fakerapi.it/api/v1/products?_quantity=1&_taxes=12&_categories_type=uuid"
-    );
-    const products = await response.json();
-    setTimeout(() => {
-      setItems(productCategory);
-    }, 2000);
-    //setItems(products)
-  };
-
-  useEffect(() => {
+useEffect(() => {
+    //cargarDatos();
+    getCategoryName();
     getProductos();
   }, [id]);
 
@@ -60,7 +93,7 @@ export const ItemListContainer = () => {
             <ItemList items={items} />
           </Fragment>
         ) : (
-          <p>Todavia no tenemos articulos en venta</p>
+          <h4>Todavia no tenemos articulos en venta</h4>
         )}
       </div>
     </div>

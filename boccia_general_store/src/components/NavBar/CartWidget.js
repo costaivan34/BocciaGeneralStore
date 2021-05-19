@@ -1,6 +1,5 @@
 import "../../styles/navbar/Navbar.css";
 import { useContext, Fragment } from "react";
-import logo from "../../../src/assets/carrito.png";
 import { CartContext } from "../../context/CartContext.js";
 
 export const CartWidget = () => {

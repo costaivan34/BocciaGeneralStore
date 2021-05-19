@@ -2,23 +2,26 @@ import "../../styles/item/ItemListContainer.css";
 import { useParams } from 'react-router-dom';
 import { ItemDetail } from "./ItemDetail.js";
 import React, { useEffect, useState } from "react";
-import {ProductData} from "../../data/ProductData.js"
+import { getFireStore } from "../../firebase"
 
 export const ItemDetailContainer = () => {
   let { id } = useParams();
   const [item, setItem] = useState([]);
  
   const getProducto = async () => {
-    let  product = ProductData.filter(products => products.id === id);
-    const response = await fetch(
-      "https://fakerapi.it/api/v1/products?_quantity=1&_taxes=12&_categories_type=uuid"
-    );
-    const products = await response.json();
-    setTimeout(() => {
-      setItem(product);
-    }, 2000);
-    //setItems(products)
-  };
+    const db = getFireStore();
+    const docRef = db.collection("items").doc(id);
+    docRef.get().then((doc) => {
+        if (!doc.exists) {
+          console.log("No such document!");   
+        }
+          setItem(doc.data());
+          console.log("Document data:", doc.data());    // doc.data() will be undefined in this case        
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
+   
+  }
 
   useEffect(() => {
     getProducto();
