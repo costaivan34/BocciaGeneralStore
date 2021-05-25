@@ -1,9 +1,12 @@
 .ItemListContainer{
   display: grid;
   margin-left: 2%;
-  color: antiquewhite;
+  margin-bottom: 2%;
+  color: white;
   border-right:1px solid rgba(0, 0, 0, 0.125);
+  background-color: #ebebeb;
 }
+
 
 
 .W-title{
@@ -12,12 +15,11 @@
   text-align: center;
 }
 
-.breadcrumb{
+.ItemListContainer .breadcrumb{
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin-top: 2%;
   margin-left: 0%;
-  padding-bottom: 5%;
   color: antiquewhite;
 }
 
@@ -28,9 +30,7 @@
 
 .header-title {
   margin-top: 2%;
- 
   margin-right: 2%;
 	background: #ff1e00;
-  
   border-radius:  24px;
 }

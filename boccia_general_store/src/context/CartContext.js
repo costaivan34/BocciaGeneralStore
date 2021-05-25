@@ -1,10 +1,9 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-  
   const calculateTotal = () => {
     let subtotal = 0;
     cart.map(
@@ -23,8 +22,9 @@ export function CartProvider({ children }) {
   
 
   const addItem = (item, quantity) => {
-   if (isInCart(item[0].id)){
-      const Index = cart.findIndex((i) => i.id === item[0].id);
+  
+   if (isInCart(item.id)){
+      const Index = cart.findIndex((i) => i.id === item.id);
       cart[Index] = {
         ...cart[Index],
         quantity: cart[Index].quantity + quantity,
@@ -33,12 +33,13 @@ export function CartProvider({ children }) {
       setCart([
         ...cart,
         {
-          "id": item[0].id,
-          "idCat": item[0].idCat,
-          "title": item[0].title,
-          "price": item[0].price,
-          "picture": item[0].picture ,
+          "id": item.id,
+          "idCat": item.category,
+          "title": item.name,
+          "price": item.price,
+          "picture": item.picture ,
           "quantity": quantity ,
+          "stock": item.stock ,
         },
       ]);
     }
@@ -49,11 +50,19 @@ export function CartProvider({ children }) {
     setCart([]);
   };
 
+//  const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+ // const result = words.filter(word => word.length > 6);
+  
+//  console.log(result);
+  // expected output: Array ["exuberant", "destruction", "present"]
+  
+
   const removeItem = (itemID) => {
-    const Index = cart.findIndex((item) => item.id === itemID);
-    const NewCart=  Array.from(cart);;
+    let Index = cart.findIndex((item) => item.id === itemID);
+    let NewCart=  Array.from(cart);
     if (Index >= 0) {
-      NewCart.splice(Index, 1) ;
+      NewCart = NewCart.filter(item => item.id !== itemID);
     }
     setCart(NewCart);
   };

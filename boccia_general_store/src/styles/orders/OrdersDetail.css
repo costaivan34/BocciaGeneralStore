@@ -1,0 +1,26 @@
+
+.OrdersDetail{
+
+  padding-top: 2%;
+  width: 100%;
+}
+
+
+    
+.product-list{
+  position: absolute;
+  float: left;
+  left: 2%;
+  width: 48%;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+.product-list .list-group-item{
+  display: flex;
+}
+
+.product-list-name{
+  text-align: center;
+  
+}

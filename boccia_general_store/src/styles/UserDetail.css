@@ -1,0 +1,41 @@
+.UserDetail{
+  
+  top: 0%;
+  position: absolute;
+  float: right;
+  right: 4%;
+  width: 45%;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+
+.UserDetail .input{
+  display: block;
+
+  padding: 1%;
+  }
+
+  
+.UserDetail input{
+  display: block;
+  margin-right: 0%;
+  padding: 1%;
+
+  }
+
+  .UserDetail {
+    display: block;
+    margin-bottom: 2%;
+    margin-right: 0%;
+    padding: 1%;
+  
+    }
+
+.UserDetail input[type=text] {
+padding-right: 60%;
+}
+
+  .UserDetail .end-btn{
+    margin: 2%;
+ 
+    }

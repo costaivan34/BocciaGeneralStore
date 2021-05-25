@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ebebeb;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root{
+  background-color: #ebebeb;
+
+}
+
+.btn-danger{
+  background-color:#ff1e00;
+}
+
+.btn-danger:active{
+  background-color:#ff1e00;
+}
+

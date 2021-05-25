@@ -19,13 +19,13 @@ export const NavBar = () => {
         <nav className="navigation">
           <ul className="links navbar-nav mr-auto">
             <li className="link nav-item">
-            <Link to={"/"}>Inicio</Link>
+            <Link to={"/"}>Home</Link>
             </li>
             <li className="link nav-item">
               <DropDown />
             </li>
             <li className="link nav-item">
-              <Link to={"/"}>Contacto</Link>
+              <Link to={"/"}>Contact</Link>
             </li>
             <li className="link nav-item">
             <Link to={"/cart"}> <CartWidget /></Link>

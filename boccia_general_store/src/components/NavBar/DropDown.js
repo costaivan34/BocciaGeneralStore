@@ -26,7 +26,7 @@ export const DropDown = () => {
 
   return (
     <div className="nav-item dropdown">
-    <a href=" " className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" onMouseOut={() => setIsOpen(isOpen)} onMouseOver={() => setIsOpen(!isOpen)}>Catalogo</a>
+    <a href=" " className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" onMouseOut={() => setIsOpen(isOpen)} onMouseOver={() => setIsOpen(!isOpen)}>Catalog</a>
     {isOpen ? (
       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {Categories.map((cat) => (

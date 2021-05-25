@@ -1,13 +1,15 @@
 .ItemList{
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(5, 1fr);
 grid-auto-rows: auto;
 grid-gap: 1rem;
 width:100%;
 float:none;
+
 }
 
-.card-img-top{
+.ItemList .card-img-top{
+  height:100%;
   border-top-right-radius: 10px ;
   border-top-left-radius: 10px;
 }
@@ -16,7 +18,7 @@ float:none;
   border-bottom-left-radius: 10px ;
   border-bottom-right-radius: 10px;
   padding-top: 2%;
-  background-color: rgb(255, 241, 206);
+  background-color: rgb(255, 255, 255);
 }
 
 .price{
@@ -26,12 +28,13 @@ font-weight: bold;
 
 }
 
-.card{
-  background-color: rgb(255, 241, 206);
+.ItemList .card{
+
   margin-bottom: 0%;
   padding: 0%;
   padding-left: 0%;
   padding-right: 0%;
+  background-color: rgb(255, 255, 255);
 }
 
 .title{

@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
   let { id } = useParams();
   const [item, setItem] = useState([]);
 
-  const getProducto = async (id) => {
+  const getProducto = async () => {
     console.log(item);
     const db = getFireStore();
     const docRef = await db.collection("items").doc(id);
@@ -36,7 +36,7 @@ export const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    getProducto(id);
+    getProducto();
   }, []);
 
   return (

@@ -1,16 +1,15 @@
-import "../../styles/item/ItemList.css";
+import { Link } from "react-router-dom";
 import "../../styles/item/ItemDetail.css";
 import { ItemCount } from "./ItemCount.js";
-import { Loader } from "../loader/Loader.js";
-import { useEffect, useState, useContext, Fragment } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext.js";
+
 
 export const ItemDetail = ({ item }) => {
   const [amount, setAmount] = useState(0);
   const [paymentButton, setPaymentButton] = useState(false);
-  const { cart, addItem } = useContext(CartContext);
-console.log(item)
+  const { addItem } = useContext(CartContext);
+  
   useEffect(() => {
     if (amount !== 0) {
       setPaymentButton(true);
@@ -29,63 +28,53 @@ console.log(item)
 
   return (
     <div className="ItemDetail">
-      <div className=" list-group-item">
-        {item ? (
-            <Fragment>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
-                  <li className="breadcrumb-item active">Inicio</li>
-                  <li className="breadcrumb-item active">Product</li>
-                  <li className="breadcrumb-item active">{item.name}</li>
-                </ol>
-              </nav>
-
-              <div className="title-header">
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item active">Home</li>
+              <li className="breadcrumb-item active">Product</li>
+              <li className="breadcrumb-item active">{item.name}</li>
+            </ol>
+          </nav>
+          <div className="card">
+            <img className="picture-prod" alt="" src={item.picture}></img>
+            <div className="descrp-header ">
+              <div className="">
                 <h4 className="title">{item.name}</h4>
-                <h4 className="price">${item.price}</h4>
-                <img
-                  className="picture-prod"
-                  alt=""
-                  src={item.picture}
-                ></img>
-                <div className="descrp-header">
-                  <p className="descrp">{item.descripcion}</p>
-                  {paymentButton ? (
-                    <div className="payment-box">
-                      <Link
-                        to="/cart"
-                        className="btn btn-danger"
-                        onClick={() => {
-                          toPayment();
-                        }}
-                      >
-                        Go to payment
-                      </Link>
-                      <input
-                        className="btn btn-outline-danger"
-                        type="button"
-                        value="Go back"
-                        onClick={() => {
-                          setAmount(0);
-                        }}
-                      ></input>
-                      <Link to="/" className="btn btn-outline-danger"  onClick={() => {
-                          addItem(item, amount);
-                        }}>
-                        Continue buying
-                      </Link>
-                    </div>
-                  ) : (
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                  )}
-                </div>
+                <h3 className="price">${item.price}</h3>
               </div>
-            </Fragment>
-          
-        ) : (
-          <Loader />
-        )}
+              <p className="descrp">{item.descripcion}</p>
+              {paymentButton ? (
+                <div className="payment-box ">
+                  <Link
+                    to="/cart"
+                    className="btn btn-danger"
+                    onClick={() => {
+                      toPayment();
+                    }}
+                  >
+                    Go to payment
+                  </Link>
+                  <Link
+                    to="/"
+                    className="btn btn-outline-danger"
+                    onClick={() => {
+                      addItem(item, amount);
+                    }}
+                  >
+                    Continue buying
+                  </Link>
+                  <Link
+                    className="btn btn-outline-danger"
+                    onClick={() => {
+                      setAmount(0);
+                    }}
+                  >Go back</Link>
+                </div>
+              ) : (
+                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+              )}
+            </div>
+          </div>
       </div>
-    </div>
   );
 };

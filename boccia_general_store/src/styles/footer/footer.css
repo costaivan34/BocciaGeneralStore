@@ -1,0 +1,16 @@
+  .footer{
+  
+  display:flex;
+  bottom: 0;
+	padding: 16px;
+  
+	right: 0;
+	width: 100%;
+  background-color: #ff1e00;
+}
+
+.footer p{
+  color: azure;
+  text-align: center;
+  margin-left: 40%;
+}
