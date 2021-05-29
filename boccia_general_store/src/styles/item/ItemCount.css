@@ -2,7 +2,6 @@
 .ItemCount{
   display:  flex;
   margin-top: 10%;
-  margin-left: 20%;
   text-align: center;
 }
 
@@ -12,4 +11,9 @@
 
 .ItemCount .btn-outline-danger{
   margin-left: 2%;
+}
+
+#toCart{
+  padding-right: 5%;
+  padding-left: 5%;
 }

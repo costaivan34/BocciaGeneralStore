@@ -38,6 +38,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         onClick={() => addCount(count)}
       ></input>
       <input
+        id="toCart"
         className="btn btn-outline-danger"
         type="button"
         value="Agregar al carrito"

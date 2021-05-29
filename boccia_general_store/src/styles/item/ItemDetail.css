@@ -40,11 +40,14 @@ text-align: justify;
   
 }
 
-.payment-box .btn {
-  display: flex;
+
+.ItemDetail .payment-box .btn {
+  display: block;
   margin: 1%;
   margin-left: 10%;
   text-align: center;
+  padding-left: 0%;
+
 }
 
 .ItemDetail .card{
@@ -60,4 +63,17 @@ text-align: justify;
 
 .ItemDetail .list-group-item{
   background-color: #ebebeb;
+}
+
+
+.ItemDetail .control .btn-back{
+  display: flex;
+  margin-top: -8.50%;
+  margin-left: 55%;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 0%;
+  padding-top: 2%;
+  padding-bottom: 1.50%;
+
 }
