@@ -5,6 +5,10 @@ import { DropDown } from "./DropDown.js";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+
+ /* <li className="link nav-item">
+  <button className="btn btn-danger" >Sign In</button>
+  </li>*/
   return (
     <div className="navbar navbar-expand-lg navbar-secondary  bg-light">
       <div className="container-fluid">
@@ -29,9 +33,9 @@ export const NavBar = () => {
             </li>
             <li className="link nav-item">
             <Link to={"/cart"}> <CartWidget /></Link>
-             
             </li>
           </ul>
+
         </nav>
       </div>
     </div>

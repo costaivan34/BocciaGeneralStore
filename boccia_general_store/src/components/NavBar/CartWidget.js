@@ -3,13 +3,13 @@ import { useContext, Fragment } from "react";
 import { CartContext } from "../../context/CartContext.js";
 
 export const CartWidget = () => {
-  const { totalQuantity } = useContext(CartContext);
+  const { cartQuantity } = useContext(CartContext);
 
   return (
     
        <Fragment className="CartWidget">
       <p  className="carrito ">
-        Cart({totalQuantity()})
+        Cart({cartQuantity()})
       </p>
    
     </Fragment>

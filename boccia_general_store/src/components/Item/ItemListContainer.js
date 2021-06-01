@@ -3,7 +3,8 @@ import { ItemList } from "./ItemList.js";
 import { getFireStore } from "../../firebase";
 import { useParams } from "react-router-dom";
 import React, { Fragment, useEffect, useState } from "react";
-//import { ProductData } from "../../data/ProductData.js";
+
+
 
 export const ItemListContainer = () => {
   let { id } = useParams("0");
@@ -25,24 +26,7 @@ export const ItemListContainer = () => {
       });
   };
 
-/*  const cargarDatos = () => {
-    let productos = ProductData;
-    const db = getFireStore();
-    var citiesRef = db.collection("items");
-
-    console.log(productos);
-    productos.map((producto) =>
-      citiesRef.doc().set({
-        category: producto.idCat,
-        name: producto.title,
-        descripcion: producto.descripcion,
-        price: producto.price,
-        stock: producto.stock,
-        picture: producto.picture,
-      })
-    );
-  };
-*/
+ 
   const getProductos = async (id) => {
     const db = getFireStore();
     let itemCollection;
@@ -72,7 +56,7 @@ export const ItemListContainer = () => {
   };
 
   useEffect(() => {
-    //cargarDatos();
+
     getCategoryName(id);
     getProductos(id);
   }, [id]);
@@ -80,9 +64,13 @@ export const ItemListContainer = () => {
   return (
     <div className="ItemListContainer">
       <div>
-        {id == null && (
+        {id == null || id === "0" ? (
           <div className="header-title">
             <h3 className="W-title">Welcome to Boccia General Store!!!</h3>
+          </div>
+        ) : (
+          <div className="header-title">
+            <h3 className="W-title">{categoryName}</h3>
           </div>
         )}
         {items ? (

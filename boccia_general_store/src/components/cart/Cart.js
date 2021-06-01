@@ -6,15 +6,19 @@ import "../../styles/Cart.css";
 
 
 export const Cart = () => {
-  const { cart, removeItem, calculateTotal } = useContext(CartContext);
-
-
-  const calculateSubtotal = (quantity, price) => {
-    return price * quantity;
-  };
+  const { cart, removeItem, calculateTotal, calculateSubtotal } = useContext(CartContext);
 
   return (
-    <Fragment>
+    <div className="Cart">
+       {0 === "0" ? (
+          <div className="header-title">
+            <h3 className="W-title">Welcome to Boccia General Store!!!</h3>
+          </div>
+        ) : (
+          <div className="header-title">
+            <h3 className="W-title">My Cart</h3>
+          </div>
+        )}
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item active">Home</li>
@@ -22,9 +26,6 @@ export const Cart = () => {
         </ol>
       </nav>
       <div className="Cart card  bg-body rounded">
-        <div className="">
-          <h4 className="title">My Cart</h4>
-        </div>
         <div className="list-group">
           {cart.length > 0 ? (
             cart.map((article) => (
@@ -41,7 +42,7 @@ export const Cart = () => {
                   <h4 className="label">Qty:</h4>
                   <h4 className="quantity">{article.quantity}</h4>
                   <h4 className="price-total">
-                    ${calculateSubtotal(article.quantity, article.price)}
+                    ${calculateSubtotal(article.id)}
                   </h4>
                   <button
                     class="btn btn-outline-secondary"
@@ -76,6 +77,6 @@ export const Cart = () => {
           " "
         )}
       </div>
-    </Fragment>
+    </div>
   );
 };

@@ -1,18 +1,21 @@
-import "../../styles/item/ItemListContainer.css";
-import { useParams } from "react-router-dom";
-import { UserDetail } from "./UserDetail.js";
-import React, { useEffect, useState } from "react";
-import { getFireStore } from "../../firebase";
+import "../../styles/user/UserDetailContainer.css";
+import { NewAccountForm } from "./NewAccountForm.js";
+import { LoginForm } from "./LoginForm.js";
+import React, { useEffect, useState, useContext } from "react";
+import { UserContext } from "../../context/UserContext.js";
+import { Input } from "./Input.js";
 
+export const UserDetailContainer = (isSignIn) => {
 
-export const UserDetailContainer = () => {
-  //si usuario logeado 
-  //pantalla continuar como 
-  //sino formulario de usuario nuevo
   return (
-    <div>
-      <div className="ItemDetailContainer">
-          <UserDetail  />
+    <div className="UserDetailContainer card rounded">
+      <h3 className="title">Client Information</h3>
+      <div>
+        {isSignIn ? (
+          <LoginForm /> //"iniciar sesion "
+        ) : (
+          <NewAccountForm /> //"crear cuenta"
+        )}
       </div>
     </div>
   );

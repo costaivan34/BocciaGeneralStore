@@ -1,6 +1,6 @@
 .Cart{
   margin: 2%;
-  padding-top: 2%;
+  margin-top: 0%;
 }
 
 .Cart .title{
@@ -8,14 +8,31 @@
   padding-bottom: 2%;
 }
 
+.Cart .header-title {
+	background: #ff1e00;
+  border-radius:  24px;
+  border-top-left-radius: 0px;
+  border-top-right-radius:  0px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.Cart .W-title{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  color: white;
+}
 
 .breadcrumb {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   color: antiquewhite;
 }
+
 
 .Cart .cart-warning{
   margin-top: 12%;
@@ -67,6 +84,13 @@
 
 #inputRemoveItem{
   border: unset;
+
+}
+
+#inputRemoveItem:hover{
+  background-color:#ff1e00;
+  border: unset;
+  
 }
 
 .Cart .btn-danger{
@@ -121,6 +145,7 @@
   margin-right: 2%;
   margin-left: 2%;
   padding: 0%;
+  padding-top: 2%;
 }
 
 

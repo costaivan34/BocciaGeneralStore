@@ -4,6 +4,11 @@ export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
+
+  const calculateSubtotal = (itemID) => {
+    let Index = cart.findIndex((i) => i.id === itemID);
+    return cart[Index].price *   cart[Index].quantity;
+  };
   const calculateTotal = () => {
     let subtotal = 0;
     cart.map(
@@ -12,7 +17,7 @@ export function CartProvider({ children }) {
     return subtotal;
   };
 
-  const totalQuantity = () => {
+  const cartQuantity = () => {
     let total = 0;
     cart.map(
       (article) => (total = total + article.quantity)
@@ -50,12 +55,7 @@ export function CartProvider({ children }) {
     setCart([]);
   };
 
-//  const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
- // const result = words.filter(word => word.length > 6);
-  
-//  console.log(result);
-  // expected output: Array ["exuberant", "destruction", "present"]
   
 
   const removeItem = (itemID) => {
@@ -77,7 +77,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart, totalQuantity, calculateTotal }}>
+      value={{ cart, addItem, removeItem, clear, isInCart, cartQuantity, calculateTotal, calculateSubtotal }}>
       {children}
     </CartContext.Provider>
   );

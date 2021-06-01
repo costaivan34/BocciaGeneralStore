@@ -34,6 +34,7 @@ export const ItemDetail = ({ item }) => {
           <li className="breadcrumb-item active">{item.name}</li>
         </ol>
       </nav>
+
       <div className="card">
         <img className="picture-prod" alt="" src={item.picture}></img>
         <div className="descrp-header ">
@@ -73,10 +74,11 @@ export const ItemDetail = ({ item }) => {
             </div>
           ) : (
             <div className="control">
-            
               <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-              <Link to="/" className="btn btn-outline-danger btn-back"> Go back</Link> 
-             
+              <Link to="/" className="btn btn-outline-danger btn-back">
+                {" "}
+                Go back
+              </Link>
             </div>
           )}
         </div>

@@ -37,7 +37,7 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     getProducto(id);
-  }, []);
+  }, [id]);
 
   return (
     <div>

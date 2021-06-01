@@ -1,0 +1,26 @@
+.UserDetailContainer {
+  top: 0%;
+  position: absolute;
+  float: right;
+  right: 4%;
+  width: 45%;
+  margin-bottom: 5%;
+  padding: 2%;
+  align-items: center;
+  align-content: center;
+}
+
+
+.UserDetailContainer .btn {
+  overflow:visible;
+  width: 120%;
+  margin-top: 10%;
+  margin-bottom: 4%;
+
+}
+
+.UserDetailContainer p {
+  text-align: center;
+  margin-left: 4%;
+}
+

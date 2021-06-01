@@ -1,10 +1,23 @@
 
 .OrdersDetail{
-
-  padding-top: 2%;
   width: 100%;
 }
 
+.OrdersDetailContainer .header-title {
+	background: #ff1e00;
+  border-radius:  24px;
+  border-top-left-radius: 0px;
+  border-top-right-radius:  0px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.OrdersDetailContainer .W-title{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  color: white;
+}
 
     
 .product-list{

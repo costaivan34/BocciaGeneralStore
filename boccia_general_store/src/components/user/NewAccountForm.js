@@ -1,17 +1,14 @@
-import "../../styles/UserDetail.css";
+import "../../styles/user/UserDetail.css";
 import { Input } from "./Input.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const UserDetail = ( {purchaseHandler}) => {
+export const NewAccountForm = ( {purchaseHandler}) => {
   const [userName, setUserName] = useState("");
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
 
 
-  const comprar = () => {
-    alert("me compraste wacho");
-  };
 
   const formHandler = (id, value) => {
     if (id === "userName") {
