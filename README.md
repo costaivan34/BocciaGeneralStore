@@ -1,24 +1,58 @@
-# Boccia General Store
+<p align="center">
+  <a href="https://getbootstrap.com/">
+    <img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/boccia_general_store/src/assets/logo.png" alt="Bootstrap logo" height="300">
+  </a>
+</p>
+<h3 align="center">Boccia General Store</h3>
+<p align="center">
+The project is an E-commerce about sports equipment of the Boccia Paralympic Sport
+</p>
 
-## Description
-The project is an E-commerce about sports equipment of the Boccia Paralympic Sport.
+# Comenzando 🚀
 
-# Getting Started with Create React App
+_Clone the repo: `git clone https://github.com/costaivan34/BocciaGeneralStore.git`_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Pre-requisitos 📋
 
-## Available Scripts
+_What things you need to install before_
 
-In the project directory, you can run:
+_Install [Node.js](https://nodejs.org/es/download/):_
 
-### `npm start`
+_Install with [npm](https://www.npmjs.com/):_
+```
+npm install bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm install  react-router-dom
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install firebase 
+```
 
-External dependencies:
-  Bootstrap
-  React Router
+### Instalación 🔧
+
+_Define environment variables in file .env_
+
+_Use .env.example as an example. Ask for file .env from developers_
+
+
+## Despliegue 📦
+
+_In the project directory, you can run:_
+
+```
+npm run start
+```
+
+Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+
+## Construido con 🛠️
+
+* [Node.js](https://nodejs.org/es/download/) 
+* [Create React App](https://create-react-app.dev/) 
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/download/) 
+* [React Router](https://reactrouter.com/web/guides/quick-start) 
+* [Firebase](https://firebase.google.com/) 
+ 
+## Autores ✒️
+
+* **Iván Costa**  - [costaivan34](https://github.com/costaivan34/)
+
