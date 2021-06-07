@@ -52,7 +52,17 @@ Runs the app in the development mode. Open http://localhost:3000 to view it in t
 * [React Router](https://reactrouter.com/web/guides/quick-start) 
 * [Firebase](https://firebase.google.com/) 
  
+
+
+## Screenshots 📸
+
+<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_1.png" >  
+
+|<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_2.png" >  |<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_3.png" >  |
+|---|---|
+|<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_4.png" >  |<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_5.png" >  |
+|<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_6.png" >  |<img src="https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/screenshots/BGS_7.png" >  |
+
 ## Autores ✒️
 
 * **Iván Costa**  - [costaivan34](https://github.com/costaivan34/)
-
