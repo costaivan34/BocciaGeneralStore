@@ -27,9 +27,6 @@ export const NavBar = () => {
               <DropDown />
             </li>
             <li className="link nav-item">
-              <Link to={"/"}>Contact</Link>
-            </li>
-            <li className="link nav-item">
             <Link to={"/cart"}> <CartWidget /></Link>
             </li>
           </ul>
