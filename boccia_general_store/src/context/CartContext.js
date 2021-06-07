@@ -27,7 +27,6 @@ export function CartProvider({ children }) {
   
 
   const addItem = (item, quantity) => {
-  
    if (isInCart(item.id)){
       const Index = cart.findIndex((i) => i.id === item.id);
       cart[Index] = {

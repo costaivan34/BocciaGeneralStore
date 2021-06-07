@@ -6,7 +6,11 @@ export const ItemList = ({ items }) => {
   return (
     <div className="ItemList">
       {items.length > 0 ? (
-        items.map((article) => <Item item={article} />)
+        items.map((article) => (
+          <li key={article.id}>
+            <Item item={article} />
+          </li>
+        ))
       ) : (
         <Loader />
       )}

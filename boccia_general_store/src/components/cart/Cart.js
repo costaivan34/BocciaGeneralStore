@@ -1,9 +1,8 @@
-import { CartContext } from "../../context/CartContext.js";
+import React from "react";
+import "../../styles/Cart.css";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import React, { Fragment } from "react";
-import "../../styles/Cart.css";
-
+import { CartContext } from "../../context/CartContext.js";
 
 export const Cart = () => {
   const { cart, removeItem, calculateTotal, calculateSubtotal } = useContext(CartContext);
@@ -29,7 +28,7 @@ export const Cart = () => {
         <div className="list-group">
           {cart.length > 0 ? (
             cart.map((article) => (
-              <div className=" list-group-item">
+              <div key={article.id}  className=" list-group-item">
                 <img
                   src={article.picture}
                   alt=""
@@ -45,7 +44,7 @@ export const Cart = () => {
                     ${calculateSubtotal(article.id)}
                   </h4>
                   <button
-                    class="btn btn-outline-secondary"
+                    className="btn btn-outline-secondary"
                     type="button"
                     id="inputRemoveItem"
                     onClick={() => {

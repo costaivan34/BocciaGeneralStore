@@ -1,4 +1,5 @@
 .ItemListContainer{
+  list-style-type:none;
   display: grid;
   margin-right: 2%;
   margin-left: 2%;

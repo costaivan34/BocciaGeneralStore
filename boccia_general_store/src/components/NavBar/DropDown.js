@@ -1,7 +1,8 @@
-import "../../styles/navbar/DropDown.css";
 import {Link} from "react-router-dom"
+import "../../styles/navbar/DropDown.css";
+import { getFireStore } from "../../firebase";
 import React, { useEffect, useState } from "react";
-import { getFireStore } from "../../firebase"
+
 
 export const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ export const DropDown = () => {
     {isOpen ? (
       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {Categories.map((cat) => (
-          <li>
+          <li key={cat.key}>
         <Link className="dropdown-item" to={`/category/${cat.key}`}>{cat.name}</Link>
           </li>
         ))}

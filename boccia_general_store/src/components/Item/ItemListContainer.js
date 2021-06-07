@@ -1,7 +1,7 @@
-import "../../styles/item/ItemListContainer.css";
 import { ItemList } from "./ItemList.js";
-import { getFireStore } from "../../firebase";
 import { useParams } from "react-router-dom";
+import { getFireStore } from "../../firebase";
+import "../../styles/item/ItemListContainer.css";
 import React, { Fragment, useEffect, useState } from "react";
 
 
@@ -10,7 +10,6 @@ export const ItemListContainer = () => {
   let { id } = useParams("0");
   const [items, setItems] = useState([]);
   const [categoryName, setCategoryName] = useState("All");
-
   const getCategoryName = async (id) => {
     const db = getFireStore();
     var docRef = db.collection("categorias").doc(id);

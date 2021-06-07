@@ -3,6 +3,16 @@
   width: 100%;
 }
 
+.OrdersDetailContainer .button-back{
+  position: absolute;
+  margin-left: 4%;
+}
+
+.OrdersDetailContainer{
+  margin-bottom: 4%;
+}
+
+
 .OrdersDetailContainer .header-title {
 	background: #ff1e00;
   border-radius:  24px;

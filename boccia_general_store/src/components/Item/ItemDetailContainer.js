@@ -1,39 +1,28 @@
 import "../../styles/item/ItemListContainer.css";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail.js";
-import React, { useEffect, useState } from "react";
-import { getFireStore } from "../../firebase";
-import { NotFoundItem } from "../error/NotFoundItem.js";
 import { Loader } from "../loader/Loader.js";
+import { getFireStore } from "../../firebase";
+import React, { useEffect, useState } from "react";
+import { NotFoundItem } from "../error/NotFoundItem.js";
+
 
 export const ItemDetailContainer = () => {
   let { id } = useParams();
   const [item, setItem] = useState([]);
 
-  const getProducto = async (id) => {
-    console.log(item);
+  const getProducto =  (id) => {
     const db = getFireStore();
-    const docRef = await db.collection("items").doc(id);
-    docRef
-      .get()
-      .then((doc) => {
-        if (!doc.exists) {
-          console.log("No such document!");
-          setItem([1]);
-        }
-        let catalogo = doc.data();
-        let ids = doc.id;
-        catalogo.id = ids;
-        setItem(catalogo);
-        console.log(item);
-        //  console.log("Document data:", doc.data());    // doc.data() will be undefined in this case
-      })
+    const productos = db.collection('items').doc(id);
+    productos.get().then((res) => {
+      setItem({ id, ...res.data() });
+    })
       .catch((error) => {
-        console.log("Error getting document:", error);
         setItem([1]);
-        console.log(item);
       });
   };
+
+
 
   useEffect(() => {
     getProducto(id);

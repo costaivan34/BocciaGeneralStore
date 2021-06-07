@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../styles/item/ItemDetail.css";
 import { ItemCount } from "./ItemCount.js";
-import { useEffect, useState, useContext, Fragment } from "react";
+import { useEffect, useState, useContext} from "react";
 import { CartContext } from "../../context/CartContext.js";
 
 export const ItemDetail = ({ item }) => {
@@ -65,12 +65,13 @@ export const ItemDetail = ({ item }) => {
               </Link>
               <Link
                 className="btn btn-outline-danger"
+                type="button"
+                value=""
                 onClick={() => {
                   setAmount(0);
                 }}
-              >
-                Go back
-              </Link>
+
+              >Go back</Link>
             </div>
           ) : (
             <div className="control">
