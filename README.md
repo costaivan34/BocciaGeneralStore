@@ -1,4 +1,11 @@
-# Boccia General Store
+![](https://raw.githubusercontent.com/costaivan34/BocciaGeneralStore/main/boccia_general_store/src/assets/logo2.png)
+
+
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
 
 ## Description
 The project is an E-commerce about sports equipment of the Boccia Paralympic Sport.
